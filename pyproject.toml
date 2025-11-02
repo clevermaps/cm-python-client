@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cm-python-client"
+version = "1.0.0"
+description = "High-level Python client for the CleverMaps REST API"
+authors = [{name = "Daniel Valansky", email = "daniel.valansky@clevermaps.io"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests",
+    "cm-python-openapi-sdk @ git+https://github.com/clevermaps/cm-python-openapi-sdk.git"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
